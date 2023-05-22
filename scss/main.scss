@@ -1,0 +1,124 @@
+/**********************/
+     /*SETTING UP*/
+/**********************/
+$color:(
+    --first-color:#fff,
+    --second-color:#03cae4,
+    --third-color:#04adc4
+);
+
+@function color($colors){
+    @return map-get($color, $colors );
+};
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-weight:700;
+    background-size: 100vh;
+    font-size: 1rem;
+}
+
+
+
+input[type="radio"]{
+    margin-top:-1px;
+    vertical-align: middle;
+}
+
+ul{
+    list-style: none;
+    padding-bottom: 1rem ;
+}
+
+header h1{
+    text-align: center;
+    margin-top: 7rem;
+}
+/**********************/
+     /*MAIN PAGE*/
+/**********************/
+.main-page{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background:color(--first-color);
+    box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width:40%;
+    border-radius: 0.6rem;
+    h2{
+        padding:1.5rem 0;
+        text-align: center;
+    }
+    .conteiner-question{
+        padding: 1rem;
+        height: 25vh;
+    }
+
+    .btn-full{
+        padding:1.2rem;
+        border-radius: 0 0 0.6rem 0.6rem;
+        background-color:color(--second-color);
+        border:0;
+        font-size:1.1rem;
+        color:color(--first-color);
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover{background:color(--third-color);}
+    }
+   
+}
+/**********************/
+     /*MOBILE*/
+/**********************/
+@media(max-width:80rem){
+    body{
+        padding: 0.5rem;
+        height:40vh;
+        border:1.5rem;
+    }
+
+    .main-page{
+        position: relative;
+        width: 100%;
+        .conteiner-question{
+            padding: 1rem;
+            height: 15vh;
+            width: 100%;
+        }
+    }
+}
+
+@media(max-width:63rem){
+    body{
+        padding: 0.5rem;
+        height:60vh;
+        border: 0.875rem;
+    }
+
+   
+    .main-page{
+        position: relative;
+        width: 100%;
+        .conteiner-question{
+            padding: 1rem;
+            height: 25vh;
+            width: 100%;
+        }
+    
+        .btn-full{font-size:1.1rem;}
+       
+    }
+
+   
+}
+ @media(max-width:25rem){body{font-size:0.75rem;}}
