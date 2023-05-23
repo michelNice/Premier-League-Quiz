@@ -11,6 +11,18 @@ $color:(
     @return map-get($color, $colors );
 };
 
+
+@mixin btn{
+    padding:1.2rem;
+    background-color:color(--second-color);
+    border:0;
+    font-size:1.1rem;
+    color:color(--first-color);
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover{background:color(--third-color);}
+}
+
 *{
     padding:0;
     margin:0;
@@ -45,8 +57,12 @@ header h1{
 /**********************/
 
 .btn-roll{
-    color: #03cae4;
-    padding:2rem
+    padding:0.7rem 1.2rem;
+    border-radius: 0.6rem;
+    @include btn();
+    margin:auto;
+    display: block;
+        
 }
 .main-page{
     position: absolute;
@@ -72,13 +88,8 @@ header h1{
     .btn-full{
         padding:1.2rem;
         border-radius: 0 0 0.6rem 0.6rem;
-        background-color:color(--second-color);
-        border:0;
         font-size:1.1rem;
-        color:color(--first-color);
-        cursor: pointer;
-        transition: 0.3s;
-        &:hover{background:color(--third-color);}
+        @include btn();
     }
    
 }
@@ -110,7 +121,11 @@ header h1{
         border: 0.875rem;
     }
 
-   
+    .btn-roll{
+        padding:0.7rem 0.9rem;
+
+            
+    }
     .main-page{
         position: relative;
         width: 100%;

@@ -100,7 +100,7 @@ btn_full.addEventListener('click',()=>{
         }else{
             quiz.innerHTML = `
             <h2>You answered ${score}/${quizData.length} questions correctly</h2>
-            <button onclick="location.reload()">Reload</button class="btn-roll">
+            <button onclick="location.reload()" class="btn-roll">Reload</button">
             `
         }
    }

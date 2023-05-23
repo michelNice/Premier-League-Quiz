@@ -33,8 +33,20 @@ header h1 {
 /*MAIN PAGE*/
 /**********************/
 .btn-roll {
-  color: #03cae4;
-  padding: 2rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 0.6rem;
+  padding: 1.2rem;
+  background-color: #03cae4;
+  border: 0;
+  font-size: 1.1rem;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: auto;
+  display: block;
+}
+.btn-roll:hover {
+  background: #04adc4;
 }
 
 .main-page {
@@ -61,6 +73,8 @@ header h1 {
 .main-page .btn-full {
   padding: 1.2rem;
   border-radius: 0 0 0.6rem 0.6rem;
+  font-size: 1.1rem;
+  padding: 1.2rem;
   background-color: #03cae4;
   border: 0;
   font-size: 1.1rem;
@@ -96,6 +110,9 @@ header h1 {
     padding: 0.5rem;
     height: 60vh;
     border: 0.875rem;
+  }
+  .btn-roll {
+    padding: 0.7rem 0.9rem;
   }
   .main-page {
     position: relative;
